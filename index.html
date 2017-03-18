@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+  <title>アドレス登録システム</title>
+</head>
+<body>
+<div id="container">
+  <div id="header"><h1>アドレス登録システム</h1></div>
+  <div id="contents">
+    <div class="form">
+      <table id="form">
+        <tbody>
+        <tr>
+          <th>名前</th>
+          <td><input id="name" type="text" placeholder="例: 佐藤 太郎" value="" /></td>
+        </tr>
+        <tr>
+          <th>住所(都道府県)</th>
+          <td><input id="pref" type="text" placeholder="例: 神奈川県" value="" /></td>
+        </tr>
+        <tr>
+          <th>市区</th>
+          <td><input id="address1" type="text" placeholder="例: 川崎市多摩区" value="" /></td>
+        </tr>
+        <tr>
+          <th>町村番地</th>
+          <td><input id="address2" type="text" placeholder="例: 登戸9999-99" value="" /></td>
+        </tr>
+        <tr>
+          <th>誕生日</th>
+          <td><input id="birthday" type="text" placeholder="例: 1984/10/3"></td>
+        </tr>
+        </tbody>
+      </table>
+      <div class="regist">
+        <button id="submit">登録</button>
+      </div>
+    </div>
+    <div class="sort">
+      <input type="radio" id="rd1" name="sortType" value="0"><label for="rd1">誕生日昇順ソート</label>
+      <input type="radio" id="rd2" name="sortType" value="1"><label for="rd1">誕生日降順ソート</label>
+      <input type="radio" id="rd3" name="sortType" value="2"><label for="rd1">元に戻す</label>
+    </div>
+    <div class="refine">
+      <select name="pref" id="search">
+        <option value="0">すべて</option>
+      </select>
+    </div>
+    <div id="display">
+      <table id="addressList" border="1px">
+        <tbody>
+          <tr>
+            <th>名前</th>
+            <th>住所</th>
+            <th>誕生日</th>
+            <th>年齢</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="footer">
+  </div>
+</div>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
